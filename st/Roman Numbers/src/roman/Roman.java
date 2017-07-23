@@ -1,3 +1,4 @@
+package roman;
 /* $Id: Roman.java,v 1.2 2006/08/10 01:38:41 aholkner Exp $ 
  *
  * Software Testing, 
@@ -9,7 +10,9 @@ public class Roman {
 	// U+2181 ad U+2182 are Unicode code points for Roman numerals
 	// 5000 and 10,000.
 	private static final char[] powers = { 'I', 'V', 'X', 'L', 'C', 'D', 'M', '\u2181', '\u2182' };
-	private static final int[][] positions = { { 0, -1, -1, -1 }, // 1 I
+	private static final int[][] positions = {
+
+			{ 0, -1, -1, -1 }, // 1 I
 			{ 0, 0, -1, -1 }, // 2 II
 			{ 0, 0, 0, -1 }, // 3 III
 			{ 0, 1, -1, -1 }, // 4 IV
