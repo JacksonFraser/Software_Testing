@@ -4,11 +4,14 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
+import roman.Roman;
+import roman.RomanException;
+
 public class TestFromRomanFunction {
 
-	@Test
-	public void test() {
-		fail("Not yet implemented");
+	@Test(expected = RomanException.class)
+	public void testRomanMinimumValueException() throws RomanException {
+		Roman.fromRoman("");
 	}
 
 }

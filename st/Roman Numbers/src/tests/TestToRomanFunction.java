@@ -1,4 +1,5 @@
 package tests;
+
 import static org.junit.Assert.assertNull;
 
 import org.junit.Test;
@@ -12,7 +13,7 @@ public class TestToRomanFunction {
 	public void testRomanMinimumValueException() throws RomanException {
 		Roman.toRoman(0);
 	}
-	//test
+
 	@Test(expected = RomanException.class)
 	public void testRomanMaximumValueException() throws RomanException {
 		Roman.toRoman(39000);
@@ -28,7 +29,7 @@ public class TestToRomanFunction {
 			}
 		}
 	}
-	
+
 	@Test
 	public void testTen() throws RomanException {
 		System.out.println(Roman.toRoman(10));
