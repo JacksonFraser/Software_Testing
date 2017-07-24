@@ -1,6 +1,6 @@
 package tests;
 
-import static org.junit.Assert.assertNull;
+import static org.junit.Assert.*;
 
 import org.junit.Test;
 
@@ -23,15 +23,14 @@ public class TestToRomanFunction {
 	public void testValidValuesAccepted() {
 		for (int i = 1; i < 39000; ++i) {
 			try {
-				Roman.toRoman(i);
+
+				String romanString = Roman.toRoman(i);
+				int romanInt = Roman.fromRoman(romanString);
+				assertEquals(i, romanInt);
 			} catch (RomanException e) {
 				assertNull(e.getMessage());
 			}
 		}
 	}
 
-	@Test
-	public void testTen() throws RomanException {
-		System.out.println(Roman.toRoman(10));
-	}
 }
